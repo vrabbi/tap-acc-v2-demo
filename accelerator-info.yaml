@@ -1,0 +1,26 @@
+id: b369edb2-c834-4a60-8a37-e71950e9d9af
+timestamp: 2023-11-17T12:55:09.277Z
+source: TAP-GUI
+username: vrabbi
+accelerator:
+  name: tanzu-java-web-app
+fragments:
+  - name: build-wrapper-gradle
+  - name: build-wrapper-maven
+  - name: devcontainer
+  - name: java-version
+  - name: tap-workload
+options:
+  lifecycle: production
+  bsGitBranch: main
+  repoVisibility: public
+  projectName: tap-acc-v2-demo
+  buildTool: maven
+  springBootVersion: 2.7
+  nativeBuild: false
+  javaVersion: 11
+  includeBuildToolWrapper: true
+  includeDevContainer: false
+  bsGitRepository: github.com?owner=vrabbi&repo=tap-acc-v2-demo
+  owner: platform-team
+  system: demo-apps

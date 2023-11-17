@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tap-acc-v2-demo
+  annotations:
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=tap-acc-v2-demo
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: vrabbi/tap-acc-v2-demo
+    grafana/dashboard-selector: tap-acc-v2-demo
+    janus-idp.io/tekton: tap-acc-v2-demo
+spec:
+  type: service
+  system: ${{ parameters.system | parseEntityRef | pick('name') }}
+  lifecycle: production
+  owner: platform-team
